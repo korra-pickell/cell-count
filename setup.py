@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="cellcount",
-    version="0.0.1",
+    version="0.0.2",
     description="Count the number of contiguous regions in a binary array",
     py_modules=["cellcount"],
     url="https://github.com/ronan-pickell/cell-count",
