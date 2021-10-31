@@ -21,5 +21,5 @@ import numpy as np
 img = np.random.randint(2, size=(5,5))
 
 # Count the number of seperate cells
-num_of_cells = cc.cellCount(img)
+num_of_cells = cc.countCells(img)
 ```
