@@ -67,8 +67,11 @@ def countCells(arr):
         raise Exception('Array must be 2-dimensional')
     
     # Ensure array is binary
-    if not np.array_equal(np.unique(arr),[0,1]):
-        raise Exception('Array must be binary')
+    primary, secondary = np.array_equal(np.unique(arr),[0,1]), np.array_equal(np.unique(arr),[0,255])
+    if not primary and not secondary:
+        raise Exception('Array must be binary ([0,1] or [0,255])')
+    elif secondary:
+        arr = (arr==255).astype('int')
 
     cell_count = 0
 
